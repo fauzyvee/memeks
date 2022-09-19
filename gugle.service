@@ -1,0 +1,10 @@
+[Unit]
+Description=Job that runs ethminer
+
+[Service]
+Type=simple
+PIDFile=/var/tmp/ethminer.pid
+ExecStart=/home/jai/bin/ethmine.sh
+
+[Install]
+WantedBy=multi-user.target
